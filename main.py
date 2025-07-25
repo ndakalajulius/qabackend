@@ -2,7 +2,8 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 import openai
 from config import OPENAI_API_KEY
-from schemas import QuestionRequest, AnswerRespons
+from schemas import QuestionRequest, AnswerResponse
+
 
 
 app = FastAPI(title="AI Q&A API")
