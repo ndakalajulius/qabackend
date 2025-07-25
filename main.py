@@ -1,14 +1,13 @@
-# app/main.py
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 import openai
 from config import OPENAI_API_KEY
-from schemas import QuestionRequest, AnswerResponse
+from schemas import QuestionRequest, AnswerRespons
 
 
 app = FastAPI(title="AI Q&A API")
 
-# Allow frontend access (adjust if needed)
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -27,7 +26,7 @@ def read_root():
 async def ask_question(payload: QuestionRequest):
     try:
         response = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo",  # Or any free-tier model
+            model="gpt-3.5-turbo",  
             messages=[{"role": "user", "content": payload.question}],
             temperature=0.7,
             max_tokens=300

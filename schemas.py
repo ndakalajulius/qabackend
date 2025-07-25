@@ -1,4 +1,3 @@
-# app/schemas.py
 from pydantic import BaseModel
 
 class QuestionRequest(BaseModel):
@@ -6,3 +5,4 @@ class QuestionRequest(BaseModel):
 
 class AnswerResponse(BaseModel):
     answer: str
+
