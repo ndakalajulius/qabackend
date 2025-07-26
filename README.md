@@ -5,9 +5,8 @@ This is the backend for the AI-powered Q&A web application. It is built using Fa
 ## 🚀 Setup Instructions
 
  1. Clone the repository
-```bash
-git clone https://github.com/ndakalajulius/ai-qa-backend.git
-cd ai-qa-backend
+git clone https://github.com/ndakalajulius/qabackend
+cd qabackend
 2. Create a virtual environment
 python3 -m venv env
 source env/bin/activate
